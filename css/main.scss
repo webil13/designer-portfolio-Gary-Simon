@@ -2,6 +2,7 @@
 
 *{
    scroll-behavior: smooth;
+  transition: all 333ms ease-in-out;
 }
 body{
   height: 100vh;
@@ -29,16 +30,6 @@ img{
   a {
     color: white;
   }
-
-  li{
-    &hover{
-      border: 1px solid white;
-      border-radius: .3em;
-      padding: .3em .6em;
-      margin-bottom: 2em;
-      background: #ff64cb;
-    }
-  }
 }
 
 header{
@@ -46,6 +37,18 @@ header{
   justify-content: space-between;
   align-content: baseline;
   padding: 2em;
+
+  nav {
+
+    li{
+    &:hover{
+      border: 1px solid white;
+      border-radius: .3em;
+      background: #ff64cb;
+      }
+      
+    }
+  }
 
   .logo{
     color: #00f7ff;
@@ -238,6 +241,15 @@ section{
   .like{
     color:#6e00ff;
   }
+
+  &:hover{
+    border: 1px solid #fff;
+    background-color: #ff64cb;
+    background-blend-mode: lighten;
+    text-shadow: 1px 1px  rgba(255,255,255,0.3);
+    box-shadow: 4px 4px 9px #ff64cb,
+                -2px -2px 5px rgba(255,255,255,0.3);
+  }
 }
 
 footer{
@@ -251,6 +263,16 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+
+    li{
+      padding: 1.1em;
+
+      &:hover{
+        border: 1px solid white;
+        border-radius: .3em;
+        background: #ff64cb;
+      }
+    }
     a{
       color: white;
       font-size: .8em;
@@ -283,6 +305,10 @@ footer{
     flex-direction: row;
     font-size: 1em;
     text-transform: uppercase;
+
+    &:focus{
+      outline:none;
+    }
     .double-chevron-up{
       margin-left: 0.3em;
       position: relative;

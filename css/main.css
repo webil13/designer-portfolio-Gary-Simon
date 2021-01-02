@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
   scroll-behavior: smooth;
+  -webkit-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
 }
 
 body {
@@ -32,14 +34,6 @@ img {
   color: white;
 }
 
-.nav-container lihover {
-  border: 1px solid white;
-  border-radius: .3em;
-  padding: .3em .6em;
-  margin-bottom: 2em;
-  background: #ff64cb;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +44,12 @@ header {
   -ms-flex-line-pack: baseline;
       align-content: baseline;
   padding: 2em;
+}
+
+header nav li:hover {
+  border: 1px solid white;
+  border-radius: .3em;
+  background: #ff64cb;
 }
 
 header .logo {
@@ -272,6 +272,15 @@ section {
   color: #6e00ff;
 }
 
+.cta:hover {
+  border: 1px solid #fff;
+  background-color: #ff64cb;
+  background-blend-mode: lighten;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 4px 4px 9px #ff64cb, -2px -2px 5px rgba(255, 255, 255, 0.3);
+          box-shadow: 4px 4px 9px #ff64cb, -2px -2px 5px rgba(255, 255, 255, 0.3);
+}
+
 footer {
   background: #6e00ff;
   display: -webkit-box;
@@ -292,6 +301,16 @@ footer nav ul {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+footer nav ul li {
+  padding: 1.1em;
+}
+
+footer nav ul li:hover {
+  border: 1px solid white;
+  border-radius: .3em;
+  background: #ff64cb;
 }
 
 footer nav ul a {
@@ -334,6 +353,10 @@ footer img {
           flex-direction: row;
   font-size: 1em;
   text-transform: uppercase;
+}
+
+.top-btn:focus {
+  outline: none;
 }
 
 .top-btn .double-chevron-up {
