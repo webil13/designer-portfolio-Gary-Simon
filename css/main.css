@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 ul {
@@ -22,11 +25,19 @@ img {
 }
 
 .nav-container {
-  background: #6700EE;
+  background: #6700ee;
 }
 
 .nav-container a {
   color: white;
+}
+
+.nav-container lihover {
+  border: 1px solid white;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
+  margin-bottom: 2em;
+  background: #ff64cb;
 }
 
 header {
@@ -56,7 +67,7 @@ header ul a {
   display: block;
   padding: 0 1em;
   font-weight: light;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .social-header {
@@ -120,6 +131,7 @@ section {
 
 .featured {
   position: relative;
+  height: 70%;
 }
 
 .featured img {
@@ -142,8 +154,8 @@ section {
   text-transform: uppercase;
   font-weight: bold;
   color: #6e00ff;
-  letter-spacing: .2em;
-  font-size: .5em;
+  letter-spacing: 0.2em;
+  font-size: 0.5em;
 }
 
 .featured-title {
@@ -207,6 +219,8 @@ section {
 }
 
 .portfolio {
+  padding-top: 15vh;
+  padding-bottom: 10vh;
   background: #f7f7f7;
 }
 
@@ -228,8 +242,8 @@ section {
 
 .codepen-btn {
   border: 1px solid #ff64cb;
-  border-radius: .3em;
-  padding: .3em .6em;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
   margin-bottom: 2em;
   background: rgba(255, 100, 203, 0.16);
   color: #ff64cb;
@@ -238,16 +252,20 @@ section {
 }
 
 .cta {
-  color: #14FF00;
   font-weight: normal;
   text-transform: uppercase;
   font-size: 1.2em;
   cursor: pointer;
   padding: 0.5em 1em;
   border: 1px solid #ff64cb;
-  border-radius: .3em;
+  border-radius: 0.3em;
   -webkit-box-shadow: 2px 2px 5px #ff64cb;
           box-shadow: 2px 2px 5px #ff64cb;
+}
+
+.cta .hire {
+  color: #14ff00;
+  margin-left: 0.5ch;
 }
 
 .cta .like {
@@ -278,21 +296,22 @@ footer nav ul {
 
 footer nav ul a {
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 footer img {
   position: absolute;
   bottom: 0;
-  right: 5px;
-  max-width: 20%;
+  right: 0;
+  max-height: 100%;
+  width: auto;
 }
 
 .top-btn {
   margin: 1em;
   border: 1px solid white;
-  border-radius: .3em;
-  padding: .3em .6em;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
   margin-bottom: 2em;
   background: #ff64cb;
   color: white;
@@ -324,11 +343,39 @@ footer img {
   height: 1em;
 }
 
+@media only screen and (max-width: 500px) {
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+  .nav-container .social-header {
+    display: none;
+  }
+  .hero {
+    margin-top: 10vh;
+  }
+  .cta {
+    font-size: 0.8em;
+  }
+  footer img {
+    display: none;
+  }
+  footer nav ul {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
 @media only screen and (min-width: 800px) {
-  .featured, .portfolio {
+  .featured,
+  .portfolio {
     text-align: left;
   }
-  .featured, .portfolio-container {
+  .featured,
+  .portfolio-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 40% auto;
@@ -336,7 +383,8 @@ footer img {
     gap: 6ch;
     place-content: center;
   }
-  .portfolio-left, .left {
+  .portfolio-left,
+  .left {
     display: -ms-grid;
     display: grid;
     place-content: center;
@@ -384,6 +432,7 @@ footer img {
 @media only screen and (min-width: 1050px) {
   .hero {
     height: 80vh;
+    padding: 4em;
   }
   section {
     padding: 4em;
@@ -402,7 +451,7 @@ footer img {
     font-size: 1.5em;
   }
   header .logo {
-    padding-left: 2em;
+    padding-left: 1em;
     font-size: 1.1em;
   }
   .social-header {
@@ -450,7 +499,7 @@ footer img {
 }
 
 .circle {
-  animation: circleAnimation 1s 9 alternate-reverse;
+  animation: circleAnimation 1s infinite alternate-reverse;
 }
 
 @-webkit-keyframes circleAnimation {
@@ -460,8 +509,8 @@ footer img {
     z-index: 5;
   }
   to {
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -472,8 +521,8 @@ footer img {
     z-index: 5;
   }
   to {
-    -webkit-transform: translateY(2px);
-            transform: translateY(2px);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 /*# sourceMappingURL=main.css.map */
