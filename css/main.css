@@ -1,22 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
   scroll-behavior: smooth;
-<<<<<<< HEAD
-=======
-  -webkit-transition: all 333ms ease-in-out;
-  transition: all 333ms ease-in-out;
->>>>>>> e9441ac19ce74d35ae8a2805b944482f98dbd9ad
 }
 
 body {
   height: 100vh;
   margin: 0;
   padding: 0;
-<<<<<<< HEAD
   font-family: "Poppins", sans-serif;
-=======
-  font-family: 'Poppins', sans-serif;
->>>>>>> e9441ac19ce74d35ae8a2805b944482f98dbd9ad
 }
 
 ul {
@@ -59,12 +50,6 @@ header {
   -ms-flex-line-pack: baseline;
       align-content: baseline;
   padding: 2em;
-}
-
-header nav li:hover {
-  border: 1px solid white;
-  border-radius: .3em;
-  background: #ff64cb;
 }
 
 header .logo {
@@ -279,11 +264,7 @@ section {
 }
 
 .cta .hire {
-<<<<<<< HEAD
   color: #14ff00;
-=======
-  color: #14FF00;
->>>>>>> e9441ac19ce74d35ae8a2805b944482f98dbd9ad
   margin-left: 0.5ch;
 }
 
@@ -328,7 +309,7 @@ footer nav ul li {
 
 footer nav ul li:hover {
   border: 1px solid white;
-  border-radius: .3em;
+  border-radius: 0.3em;
   background: #ff64cb;
 }
 
@@ -374,10 +355,6 @@ footer img {
   text-transform: uppercase;
 }
 
-.top-btn:focus {
-  outline: none;
-}
-
 .top-btn .double-chevron-up {
   margin-left: 0.3em;
   position: relative;
@@ -388,42 +365,71 @@ footer img {
 @media only screen and (max-width: 500px) {
   .nav-container {
     position: fixed;
-<<<<<<< HEAD
     top: 0;
     left: 0;
-=======
->>>>>>> e9441ac19ce74d35ae8a2805b944482f98dbd9ad
     width: 100vw;
     z-index: 100;
   }
   .nav-container .social-header {
     display: none;
   }
-<<<<<<< HEAD
-  .hero {
-    margin-top: 10vh;
+  .nav-container .social-header .top-btn {
+    margin: 1em;
+    border: 1px solid white;
+    border-radius: 0.3em;
+    padding: 0.3em 0.6em;
+    margin-bottom: 2em;
+    background: #ff64cb;
+    color: white;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    padding: 0.3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    font-size: 1em;
+    text-transform: uppercase;
   }
-  .cta {
-    font-size: 0.8em;
+  .nav-container .social-header .top-btn:focus {
+    outline: none;
   }
-  footer img {
-    display: none;
+  .nav-container .social-header .top-btn .double-chevron-up {
+    margin-left: 0.3em;
+    position: relative;
+    width: 1em;
+    height: 1em;
   }
-  footer nav ul {
-    display: -ms-grid;
-    display: grid;
-  }
-=======
->>>>>>> e9441ac19ce74d35ae8a2805b944482f98dbd9ad
 }
 
-@media only screen and (min-width: 800px) {
-  .featured,
-  .portfolio {
+@media only screen and (max-width: 500px) and (max-width: 500px) {
+  .nav-container .social-header .nav-container {
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+  }
+  .nav-container .social-header .nav-container .social-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 800px) {
+  .nav-container .social-header .featured,
+  .nav-container .social-header .portfolio {
     text-align: left;
   }
-  .featured,
-  .portfolio-container {
+  .nav-container .social-header .featured,
+  .nav-container .social-header .portfolio-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 40% auto;
@@ -431,23 +437,67 @@ footer img {
     gap: 6ch;
     place-content: center;
   }
-  .portfolio-left,
-  .left {
+  .nav-container .social-header .portfolio-left,
+  .nav-container .social-header .left {
     display: -ms-grid;
     display: grid;
     place-content: center;
   }
-  .codepen-btn {
+  .nav-container .social-header .codepen-btn {
     max-width: 12vw;
   }
-  .featured img {
+  .nav-container .social-header .featured img {
     max-width: 100%;
   }
-  .skills {
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-container .social-header .hero {
+    margin-top: 10vh;
+  }
+  .nav-container .social-header .cta {
+    font-size: 0.8em;
+  }
+  .nav-container .social-header footer img {
+    display: none;
+  }
+  .nav-container .social-header footer nav ul {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+
+@media only screen and (max-width: 500px) and (min-width: 800px) {
+  .nav-container .featured,
+  .nav-container .portfolio {
+    text-align: left;
+  }
+  .nav-container .featured,
+  .nav-container .portfolio-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 40% auto;
+        grid-template-columns: 40% auto;
+    gap: 6ch;
+    place-content: center;
+  }
+  .nav-container .portfolio-left,
+  .nav-container .left {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .nav-container .codepen-btn {
+    max-width: 12vw;
+  }
+  .nav-container .featured img {
+    max-width: 100%;
+  }
+  .nav-container .skills {
     position: relative;
     height: 40vh;
   }
-  .skills-container ul {
+  .nav-container .skills-container ul {
     position: absolute;
     top: 10%;
     left: 5%;
@@ -458,12 +508,29 @@ footer img {
         grid-template-columns: repeat(3, 1fr);
     gap: 3ch;
   }
-  .skills-container ul li {
+}
+
+@media only screen and (max-width: 500px) and (min-width: 800px) and (min-width: 1050px) {
+  .nav-container .skills-container ul .hero {
+    height: 80vh;
+    padding: 4em;
+  }
+  .nav-container .skills-container ul section {
+    padding: 4em;
+  }
+  .nav-container .skills-container ul .nav-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 65% auto;
+        grid-template-columns: 65% auto;
+    background: unset;
+  }
+  .nav-container .skills-container ul .nav-container li {
     height: 50vh;
     -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
-  .cta {
+  .nav-container .skills-container ul .cta {
     max-width: 300px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -477,32 +544,37 @@ footer img {
   }
 }
 
-@media only screen and (min-width: 1050px) {
-  .hero {
+@media only screen and (max-width: 500px) and (min-width: 800px) and (min-width: 1050px) {
+  .nav-container .skills-container ul .hero {
     height: 80vh;
     padding: 4em;
   }
-  section {
+  .nav-container .skills-container ul section {
     padding: 4em;
   }
-  .nav-container {
+  .nav-container .skills-container ul .nav-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 65% auto;
         grid-template-columns: 65% auto;
     background: unset;
   }
-  .nav-container header {
+  .nav-container .skills-container ul .nav-container header {
     background: #6700ee;
-  }
-  header {
     font-size: 1.5em;
   }
-  header .logo {
+  .nav-container .skills-container ul .nav-container header .logo {
     padding-left: 1em;
     font-size: 1.1em;
   }
-  .social-header {
+  .nav-container .skills-container ul header {
+    font-size: 1.5em;
+  }
+  .nav-container .skills-container ul header .logo {
+    padding-left: 1em;
+    font-size: 1.1em;
+  }
+  .nav-container .skills-container ul .social-header {
     position: relative;
     top: 3em;
     right: -8em;
@@ -513,12 +585,12 @@ footer img {
     max-width: 80px;
     max-height: 40px;
   }
-  .bottom-cta .social-header {
+  .nav-container .skills-container ul .bottom-cta .social-header {
     position: relative;
     top: 0;
     left: 70vw;
   }
-  .hero {
+  .nav-container .skills-container ul .hero {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 65% auto;
@@ -526,22 +598,22 @@ footer img {
     background: unset;
     padding: 0;
   }
-  .hero .content {
+  .nav-container .skills-container ul .hero .content {
     background: #6e00ff;
     padding: 6em 8em 6em 4em;
     text-align: left;
   }
-  .hero .content h1 {
+  .nav-container .skills-container ul .hero .content h1 {
     font-size: 3em;
     line-height: 1.2em;
   }
-  .hero .hero-design {
+  .nav-container .skills-container ul .hero .hero-design {
     display: unset;
     margin-left: -50%;
     margin-top: 15%;
     width: 100%;
   }
-  .meet {
+  .nav-container .skills-container ul .meet {
     margin: unset;
   }
 }
