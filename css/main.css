@@ -41,6 +41,14 @@ img {
   color: white;
 }
 
+.nav-container lihover {
+  border: 1px solid white;
+  border-radius: 0.3em;
+  padding: 0.3em 0.6em;
+  margin-bottom: 2em;
+  background: #ff64cb;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
